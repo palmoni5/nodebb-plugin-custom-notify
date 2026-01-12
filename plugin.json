@@ -1,0 +1,12 @@
+{
+  "id": "nodebb-plugin-custom-notifications",
+  "name": "Custom Notifications",
+  "description": "Custom notification text",
+  "library": "./library.js",
+  "hooks": [
+    {
+      "hook": "filter:notifications.create",
+      "method": "modifyNotification"
+    }
+  ]
+}
