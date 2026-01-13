@@ -2,6 +2,7 @@
   "id": "nodebb-plugin-custom-notifications",
   "name": "Custom Notifications",
   "description": "Custom notification text",
+  "url": "https://github.com/palmoni5/nodebb-plugin-custom-notify",
   "library": "./library.js",
   "hooks": [
     {
@@ -9,4 +10,5 @@
       "method": "modifyNotification"
     }
   ]
+
 }
