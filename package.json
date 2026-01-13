@@ -1,9 +1,10 @@
 {
   "name": "nodebb-plugin-custom-notify",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "מוסיף שמות כותרות בהתראות על נושאים חדשים",
   "main": "library.js",
   "nbbpm": {
     "compatibility": "^1.19.0 || ^2.0.0 || ^3.0.0"
   }
+
 }
