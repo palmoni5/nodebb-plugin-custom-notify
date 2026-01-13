@@ -22,7 +22,7 @@
     ```
 2. היכנס לפאנל הניהול של NodeBB (ACP).
 3. נווט ללשונית **Plugins** -> **Manage**.
-4. אתר את התוסף `nodebb-plugin-custom-notifications` והפוך אותו לפעיל (Activate).
+4. אתר את התוסף `nodebb-plugin-custom-notify` והפוך אותו לפעיל (Activate).
 5. בצע הפעלה מחדש (Restart) למערכת ה-NodeBB.
 
 ## תאימות גרסאות
