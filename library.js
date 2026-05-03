@@ -3,6 +3,7 @@
 const topics = require.main.require('./src/topics');
 const categories = require.main.require('./src/categories');
 const user = require.main.require('./src/user');
+const translator = require.main.require('./src/translator');
 const winston = require.main.require('winston');
 
 const plugin = {};
@@ -27,15 +28,16 @@ plugin.modifyNotification = async function (payload) {
                     const username = await user.getUserField(notification.from, 'username');
 
                     if (categoryName && username) {
-                        // שינוי לשימוש בתגיות HTML להדגשה
-                        const newText = `<strong>${username}</strong> פרסם את הנושא <strong>${topicData.title}</strong> בקטגוריית <strong>${categoryName}</strong>`;
-                        
-                        notification.bodyShort = newText;
+                        notification.bodyShort = translator.compile(
+                            'custom-notify:new-topic-in-category',
+                            username,
+                            topicData.title,
+                            categoryName
+                        );
                     }
                 }
             }
         } catch (err) {
-            // שומרים רק לוג שגיאות למקרה של תקלה, לוגים רגילים הוסרו
             winston.error('[Custom-Notifications] Error:', err);
         }
     }

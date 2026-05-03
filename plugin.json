@@ -1,9 +1,10 @@
 {
-  "id": "nodebb-plugin-custom-notifications",
+  "id": "nodebb-plugin-custom-notify",
   "name": "Custom Notifications",
-  "description": "Custom notification text",
+  "description": "Customizes new-topic notifications with translated topic and category details",
   "url": "https://github.com/palmoni5/nodebb-plugin-custom-notify",
   "library": "./library.js",
+  "languages": "./languages",
   "hooks": [
     {
       "hook": "filter:notifications.create",

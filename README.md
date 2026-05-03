@@ -1,32 +1,37 @@
 # NodeBB Custom Notify Plugin
 
-תוסף עבור NodeBB המאפשר התאמה אישית של תוכן ההתראות הנשלחות למשתמשים בעת פרסום נושאים חדשים בקטגוריות שהם עוקבים אחריהן.
+Customizes the `new-topic-in-category` notification in NodeBB so users see a clearer message with:
 
-## מה התוסף עושה?
+- the author username
+- the topic title
+- the category name
 
-כאשר נוצר נושא חדש, התוסף מעדכן את תוכן ההתראה כך שיכלול מידע מפורט וברור יותר. במקום התראה גנרית, המשתמשים יראו מידע המורכב מ:
-* **שם המשתמש** שפרסם את הנושא.
-* **כותרת הנושא** החדש.
-* **שם הקטגוריה** שבה הוא פורסם.
+## Example
 
-הטקסט מעוצב עם תגיות הדגשה (`<strong>`) כדי להקל על הקריאה בתוך ממשק ההתראות.
+English:
 
-## דוגמה לפורמט ההתראה
-> **ישראל ישראלי** פרסם את הנושא **מדריך לשימוש בתוספים** בקטגוריית **מדריכים**
+> **alice** posted the topic **Welcome to the forum** in **Announcements**
 
-## התקנה
+Hebrew:
 
-1. התקן את התוסף דרך ה-Terminal:
-   ```bash
-   npm install nodebb-plugin-custom-notify
-    ```
-2. היכנס לפאנל הניהול של NodeBB (ACP).
-3. נווט ללשונית **Plugins** -> **Manage**.
-4. אתר את התוסף `nodebb-plugin-custom-notify` והפוך אותו לפעיל (Activate).
-5. בצע הפעלה מחדש (Restart) למערכת ה-NodeBB.
+> **alice** פרסם את הנושא **ברוכים הבאים לפורום** בקטגוריית **הודעות**
 
-## תאימות גרסאות
-התוסף תומך בגרסאות NodeBB הבאות:
-* `^1.19.0`
-* `^2.0.0`
-* `^3.0.0`
+## Features
+
+- Rewrites the notification body for new topics in followed categories
+- Uses NodeBB language files instead of a hard-coded string
+- Includes English and Hebrew translations
+
+## Installation
+
+```bash
+npm install nodebb-plugin-custom-notify
+```
+
+Then activate the plugin in the NodeBB ACP and restart NodeBB.
+
+## Compatibility
+
+- `^1.19.0`
+- `^2.0.0`
+- `^3.0.0`
